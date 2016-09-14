@@ -5,14 +5,14 @@ require_once 'vendor/autoload.php';
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'testmailforpolaz@yandex.ru';                 // SMTP username
-$mail->Password = 'password112233';                           // SMTP password
+$mail->Username = '***';                 // SMTP username
+$mail->Password = '***';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 
-$mail->setFrom('testmailforpolaz@yandex.ru');
+$mail->setFrom('president@whitehouse.gov', 'Donald Trump');
 $mail->addAddress($_POST['mail'], 'Test');     // Add a recipient
 
 if (!empty($_FILES)) {
