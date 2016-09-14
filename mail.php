@@ -12,7 +12,7 @@ $mail->Password = 'password112233';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 
-$mail->setFrom('testmailforpolaz@yandex.ru');
+$mail->setFrom('testmailforpolaz@yandex.ru', 'TEST');
 $mail->addAddress($_POST['mail'], 'Test');     // Add a recipient
 
 if (!empty($_FILES)) {
