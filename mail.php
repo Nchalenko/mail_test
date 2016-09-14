@@ -3,7 +3,7 @@
 require_once 'vendor/autoload.php';
 
 $mail = new PHPMailer;
-
+$mail->CharSet = 'utf-8';
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
